@@ -1,0 +1,206 @@
+{
+  "model_evaluations": [
+    {
+      "model": "AWQ MIT HAN Lab Repository",
+      "precision": "INT4",
+      "tests_total": 10,
+      "tests": [
+        {
+          "test_id": 1,
+          "prompt": "Explain the difference between supervised and unsupervised learning.",
+          "response": "Supervised learning is where the data is labeled with labels, while unsupervised learning is where the data is not labeled with labels, but it has inherent relationships between the variables.",
+          "speed_tokens_per_sec": 21.79
+        },
+        {
+          "test_id": 2,
+          "prompt": "Write a short email to your boss explaining that you will be late to work because of a doctor's appointment.",
+          "response": "Dear [Boss's Name], I am writing to inform you that I will be late to work on [insert date] due to a doctor's appointment. I am sorry for any inconvenience this may cause.",
+          "speed_tokens_per_sec": 26.92
+        },
+        {
+          "test_id": 3,
+          "prompt": "Give me 5 creative ideas for a science fair project for a 10-year-old.",
+          "response": "1. Create a telescope that can focus on objects in the distance.\n2. Build a scale model of a building.\n3. ...",
+          "speed_tokens_per_sec": 26.60
+        },
+        {
+          "test_id": 4,
+          "prompt": "Classify the following animals as mammal, bird, reptile, or fish.",
+          "response": {
+            "classification": {
+              "Dolphin": "Mammal",
+              "Penguin": "Bird",
+              "Crocodile": "Reptile",
+              "Salmon": "Fish",
+              "Bat": "Mammal"
+            },
+            "final_answer": "Salmon is a mammal."
+          },
+          "speed_tokens_per_sec": 26.96
+        },
+        {
+          "test_id": 5,
+          "prompt": "Translate the following sentence into French: \"The quick brown fox jumps over the lazy dog.\"",
+          "response": "Le bruit brillant du chat raté se revoit la tête et s'étend jusqu'à la poitrine du sourcil épris.",
+          "speed_tokens_per_sec": 26.80
+        },
+        {
+          "test_id": 6,
+          "prompt": "Why is it important to recycle plastic? Give at least 3 reasons.",
+          "response": "Recycling plastic reduces waste in landfills and oceans, allows materials to be reused, and reduces environmental pollution.",
+          "speed_tokens_per_sec": 26.66
+        },
+        {
+          "test_id": 7,
+          "prompt": "Janet has 8 apples. She gives 3 to her friend and then buys 5 more. How many apples does she have?",
+          "response": "Janet now has 13 apples.",
+          "speed_tokens_per_sec": 26.92
+        },
+        {
+          "test_id": 8,
+          "prompt": "A store has 20 boxes of pencils. Each box contains 12 pencils. They sell 15 boxes. How many pencils are left?",
+          "response": "The number of pencils left in the store is 15 pencils.",
+          "speed_tokens_per_sec": 27.04
+        },
+        {
+          "test_id": 9,
+          "prompt": "John has 5 bags of marbles. Each bag has 8 marbles. He gives away 18 marbles. How many remain?",
+          "response": "The number of marbles left is 41 marbles.",
+          "speed_tokens_per_sec": 26.59
+        },
+        {
+          "test_id": 10,
+          "prompt": "A class has 30 students. 40% of them are girls. How many boys are there?",
+          "response": "There are 20 boys in the class.",
+          "speed_tokens_per_sec": 26.39
+        }
+      ],
+      "average_speed_tokens_per_sec": 26.27,
+      "metrics": {
+        "average_speed_tokens_per_sec": 36.56,
+        "perplexity": {
+          "value": 15.03,
+          "dataset": "WikiText-2"
+        },
+        "model_size_gb": 2.24,
+        "gpu_memory_gb": 1.01
+      },
+      "comparison": {
+        "metrics_delta": {
+          "perplexity": {
+            "fp16": 15.61,
+            "awq_int4": 15.03
+          },
+          "speed_tokens_per_sec": {
+            "fp16": 26.9,
+            "awq_int4": 36.6
+          },
+          "model_size_gb": {
+            "fp16": 2.20,
+            "awq_int4": 2.24
+          }
+        }
+      }
+    },
+    {
+      "model": "AWQ LLM Compressor",
+      "precision": "INT4",
+      "tests_total": 10,
+      "tests": [
+        {
+          "test_id": 1,
+          "prompt": "Explain the difference between supervised and unsupervised learning.",
+          "response": "Supervised learning uses labeled data, while unsupervised learning uses unlabeled data to discover patterns.",
+          "speed_tokens_per_sec": 5.32
+        },
+        {
+          "test_id": 2,
+          "prompt": "Write a short email to your boss explaining that you will be late to work because of a doctor's appointment.",
+          "response": "I will be late to work due to a doctor's appointment and some personal health matters.",
+          "speed_tokens_per_sec": 5.81
+        },
+        {
+          "test_id": 3,
+          "prompt": "Give me 5 creative ideas for a science fair project for a 10-year-old.",
+          "response": "1. Solar oven\n2. Programmable robot\n3. Object-detecting robot\n4. ...",
+          "speed_tokens_per_sec": 5.78
+        },
+        {
+          "test_id": 4,
+          "prompt": "Classify the following animals as mammal, bird, reptile, or fish.",
+          "response": "Dolphin is a mammal, penguin a bird, crocodile a reptile, salmon a fish, and bat a mammal.",
+          "speed_tokens_per_sec": 5.74
+        },
+        {
+          "test_id": 5,
+          "prompt": "Translate the following sentence into French: \"The quick brown fox jumps over the lazy dog.\"",
+          "response": "Le coureur en chien brun pousse l'ange jaune sur la chienesse.",
+          "speed_tokens_per_sec": 5.74
+        },
+        {
+          "test_id": 6,
+          "prompt": "Why is it important to recycle plastic? Give at least 3 reasons.",
+          "response": "Recycling plastic reduces pollution, limits waste in landfills, and helps preserve natural resources.",
+          "speed_tokens_per_sec": 5.73
+        },
+        {
+          "test_id": 7,
+          "prompt": "Janet has 8 apples. She gives 3 to her friend and then buys 5 more. How many apples does she have?",
+          "response": "Janet has 13 apples.",
+          "speed_tokens_per_sec": 5.70
+        },
+        {
+          "test_id": 8,
+          "prompt": "A store has 20 boxes of pencils. Each box contains 12 pencils. They sell 15 boxes. How many pencils are left?",
+          "response": "There are 12 pencils left in the store.",
+          "speed_tokens_per_sec": 5.72
+        },
+        {
+          "test_id": 9,
+          "prompt": "John has 5 bags of marbles. Each bag has 8 marbles. He gives away 18 marbles. How many remain?",
+          "response": "John has 18 marbles left.",
+          "speed_tokens_per_sec": 5.74
+        },
+        {
+          "test_id": 10,
+          "prompt": "A class has 30 students. 40% of them are girls. How many boys are there?",
+          "response": "There are 10 boys in the class.",
+          "speed_tokens_per_sec": 5.74
+        }
+      ],
+      "average_speed_tokens_per_sec": 5.70,
+      "metrics": {
+        "average_speed_tokens_per_sec": 5.68,
+        "perplexity": {
+          "value": 15.22,
+          "dataset": "WikiText-2"
+        },
+        "model_size_gb": 0.77,
+        "gpu_memory_gb": 0.54
+      },
+      "gains": {
+        "storage_saved_gb": 1.43,
+        "size_reduction_factor": 2.9,
+        "perplexity_change_percent": -2.5,
+        "speed_change_factor": 0.2
+      },
+      "summary_statement": "By quantizing the distilled TinyLlama to INT4 with AWQ using llm-compressor, the model size was reduced from 2.20 GB to 0.77 GB, saving 1.43 GB of storage while keeping perplexity nearly unchanged.",
+      "comparison": {
+        "metrics_delta": {
+          "perplexity": {
+            "fp16": 15.61,
+            "awq_int4_llm_compressor": 15.22
+          },
+          "speed_tokens_per_sec": {
+            "fp16": 25.9,
+            "awq_int4_llm_compressor": 5.7
+          },
+          "model_size_gb": {
+            "fp16": 2.20,
+            "awq_int4_llm_compressor": 0.77
+          }
+        }
+      }
+    }
+  ]
+}
